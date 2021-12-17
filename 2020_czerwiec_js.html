@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    function calculatePaintCans() {
+        const surfaceToPaint = parseInt(document.getElementById('surfaceToPaint').value, 10);
+
+        //Math.ceil zaokrągla do góry
+        const canNumber = Math.ceil(surfaceToPaint / 4);
+
+        const result = document.getElementById('result');
+        result.innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: " + canNumber;
+    }
+</script>
+
+<body>
+    <p>Podaj powierzchnię <input id="surfaceToPaint" type="number"></p>
+    <button id="calculate" onclick="calculatePaintCans();">Policz</button>
+
+    <p id="result"></p>
+</body>

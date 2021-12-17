@@ -1,0 +1,54 @@
+<script type="text/javascript">
+    function checkPassword() {
+        const password = document.getElementById('password').value;
+        let color = "";
+        let passwordStrength = "";
+
+        //sposób 1 regex
+        const hasNumberRegex = /\d/; // \d oznacza zakres liczbę, można tam wrzucić [0-9] i na etapie programowania na egzaminie wyjdzie to samo
+        const hasNumber1 = hasNumberRegex.test(password);
+        console.log(hasNumber1);
+
+        //sposób 2 iteracja po tabilcy 
+        let hasNumber2 = false;
+        Array.from(password).forEach(element => {
+            if (element >= 0 && element <= 9) {
+                hasNumber2 = true;
+            }
+        });
+        console.log(hasNumber2);
+
+        const check = document.getElementById('check');
+        check.innerHTML = "Sposób 1: " + hasNumber1 + "Sposób 2: " + hasNumber2;
+
+        if (password.length >= 7 && hasNumber1) {
+            color = "green";
+            passwordStrength = "DOBRE";
+        } else if ((password.length >= 4 && password.length <= 6) && hasNumber1) {
+            color = "blue";
+            passwordStrength = "ŚREDNIE";
+        } else if (password.length === 0) {
+            color = "red";
+            passwordStrength = "WPISZ HASŁO!";
+        } else {
+            color = "yellow";
+            passwordStrength = "SŁABE";
+        }
+
+        const result = document.getElementById('result');
+        result.innerHTML = passwordStrength;
+        result.style.color = color;
+    }
+</script>
+
+<body>
+    <p>
+        Twojeh hasło
+        <input id="password" type="password">
+        <button id="calculate" onclick="checkPassword();">sprawdz</button>
+    </p>
+
+    <p id="result"></p>
+
+    <p id="check"></p>
+</body>

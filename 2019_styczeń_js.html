@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    function changeCss(fontColor) {
+        let fontSize = parseInt(document.getElementById('fontSize').value, 10);
+        let font = document.getElementById('font').value;
+
+        const result = document.getElementById('result');
+
+        result.style.fontStyle = font;
+        result.style.color = fontColor;
+        result.style.fontSize = fontSize + "%";
+    }
+</script>
+
+<style>
+    button {
+        width: 25px;
+        height: 25px;
+    }
+</style>
+
+<body>
+    <span>Podaj rozmiar tekstu w procentach<input id="fontSize" type="number">%</span>
+
+    <p>
+        <select id="font">
+            <option value="normal">prosty</option>
+            <option value="italic">pochyły</option>
+        </select>
+    </p>
+
+    <p>Jakim kolorem sformatować tekst? wybierz przycisk</p>
+    <button onclick="changeCss('red');" style="background-color: red;"></button>
+    <button onclick="changeCss('green');" style="background-color: green;"></button>
+    <button onclick="changeCss('blue');" style="background-color: blue;"></button>
+
+    <p id="result">To jest przykład paragrafu, formatowanego przez JS</p>
+</body>
