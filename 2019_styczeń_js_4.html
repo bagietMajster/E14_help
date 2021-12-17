@@ -1,0 +1,50 @@
+<script type="text/javascript">
+    function calculateCoffePrice() {
+        const coffeType = parseInt(document.getElementById('coffe').value, 10);
+        const coffeWeight = parseInt(document.getElementById('weight').value, 10);
+
+        //sposób 1
+        let price = 0;
+
+        if (coffeType === 1) {
+            price = 5 * coffeWeight;
+        } else if (coffeType === 2) {
+            price = 6 * coffeWeight;
+        } else if (coffeType === 3) {
+            price = 7 * coffeWeight;
+        }
+
+        //sposób 2
+        let price2 = 0;
+
+        switch (coffeType) {
+            case 1:
+                price2 = 5 * coffeWeight;
+                break;
+            case 2:
+                price2 = 6 * coffeWeight;
+                break;
+            case 3:
+                price2 = 7 * coffeWeight;
+                break;
+        }
+
+        const result1 = document.getElementById('result1');
+        result1.innerHTML = `Sposób 1: Koszt zamówienia wynosi ${price} zł`;
+
+        const result2 = document.getElementById('result2');
+        result2.innerHTML = `Sposób 2: Koszt zamówienia wynosi ${price2} zł`;
+    }
+</script>
+
+<body>
+    <p>Podaj numer kawy</p>
+    <input id="coffe" type="number">
+
+    <p>Podaj wage w dekagramach</p>
+    <input id="weight" type="number">
+
+    <button id="calculate" onclick="calculateCoffePrice();">Zamawiam</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+</body>
