@@ -12,7 +12,7 @@ var element = document.querySelector("#id");
 ## interpolacja stringów
 W plikach nie używałem interpolacji, bo nie pamiętam czy w technikum było to poruszane czy nie ale używa się jej bardzo prosto:
 ```
-var result = `tutaj jest normalny string i jak chcemy do niego coś dodać to robimy ${zmienna} i dalej sobie możemy pisać`;
+var result = `normalny string i jak do niego coś dodajem to robimy ${zmienna} i dalej sobie możemy pisać`;
 ```
 Należy zwrócić uwagę że to nie jest ' ani " tylko tylda(~) bez shifta. aka backtick.
 
