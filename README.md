@@ -21,12 +21,12 @@ Warto znać różnice i stosować const, nie tylko dla optymalizacji, ale stałe
 Egzamin nie jest skomplikowany i można go oblecieć na samym let ale trzeba być czujnym.
 
 ## z czego się uczyć?
-https://javascript.info/
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
-https://exploringjs.com/
+https://javascript.info/  
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics  
+https://exploringjs.com/  
 Lub dowolne źródło w internecie tłumaczące PODSTAWY, nie uczymy się wszystkiego. Podstawy wystarczą do zdania egzaminu i trochę obycia z kodem i przerobienie samodzielnie wszystkich arkuszy.
 
 ## Bonus
-Jak ktoś chce pracować jako programista i klepać frontend to polecam ten link:
-https://gist.github.com/Piotr-Aueternum/97213fa28a27cd7c3a45242a526d7f51
+Jak ktoś chce pracować jako programista i klepać frontend to polecam ten link:  
+https://gist.github.com/Piotr-Aueternum/97213fa28a27cd7c3a45242a526d7f51  
 Odpowiednio przerobiony wraz z projektami do portfolio (3-4 większe projekty) może dać pracę.
